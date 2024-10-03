@@ -40,3 +40,4 @@
 /Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/CLI/obj/Debug/net8.0/Program.pdb
 /Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/CLI/obj/Debug/net8.0/Program.genruntimeconfig.cache
 /Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/CLI/obj/Debug/net8.0/ref/Program.dll
+/Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/CLI/obj/Debug/net8.0/Program.sourcelink.json

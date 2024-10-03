@@ -10,3 +10,4 @@
 /Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/Classes/obj/Debug/net8.0/Classes.pdb
 /Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/Classes/obj/Debug/net8.0/ref/Classes.dll
 /Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/Classes/obj/Debug/net8.0/Classes.csproj.AssemblyReference.cache
+/Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/Classes/obj/Debug/net8.0/Classes.sourcelink.json
