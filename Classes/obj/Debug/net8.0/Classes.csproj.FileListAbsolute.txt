@@ -1,0 +1,12 @@
+/Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/Classes/bin/Debug/net8.0/Classes.deps.json
+/Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/Classes/bin/Debug/net8.0/Classes.dll
+/Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/Classes/bin/Debug/net8.0/Classes.pdb
+/Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/Classes/obj/Debug/net8.0/Classes.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/Classes/obj/Debug/net8.0/Classes.AssemblyInfoInputs.cache
+/Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/Classes/obj/Debug/net8.0/Classes.AssemblyInfo.cs
+/Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/Classes/obj/Debug/net8.0/Classes.csproj.CoreCompileInputs.cache
+/Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/Classes/obj/Debug/net8.0/Classes.dll
+/Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/Classes/obj/Debug/net8.0/refint/Classes.dll
+/Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/Classes/obj/Debug/net8.0/Classes.pdb
+/Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/Classes/obj/Debug/net8.0/ref/Classes.dll
+/Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/Classes/obj/Debug/net8.0/Classes.csproj.AssemblyReference.cache
