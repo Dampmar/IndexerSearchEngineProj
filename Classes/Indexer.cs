@@ -77,8 +77,9 @@ public class Indexer
 
         // Save the indexed data to a JSON file
         string indexFilePath = Path.Combine(folderPath, "index.json");
-        SaveIndex(indexFilePath); // Asegúrate de que esto se llame aquí 
-        Console.WriteLine($"Index saved to: {indexFilePath}");
+        SaveIndex(indexFilePath); // Asegúrate de que esto se llame aquí
+        string relativePath = Path.Combine(Path.GetFileName(folderPath), "index.json");
+        Console.WriteLine($"Index saved to: {relativePath}");
     }
 
     private Document IndexFile(string filePath)

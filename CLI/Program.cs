@@ -2,7 +2,7 @@
 using System;
 using System.IO;
 using System.Linq;
-
+/*
 class Program 
 {
     private static string distance; // variable to save the distance
@@ -127,13 +127,7 @@ class Program
         }
     }
 }
-
-// Cambios nuevos, para acceder hasta folders 
-/*
-using Classes;
-using System;
-using System.IO;
-using System.Linq;
+*/
 
 class Program 
 {
@@ -276,4 +270,3 @@ class Program
         }
     }
 }
-*/
