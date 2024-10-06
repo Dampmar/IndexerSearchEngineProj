@@ -44,5 +44,4 @@ public class DocumentUnitTest
     {
         var emptyDocument = new Query("");
     }
-
 }

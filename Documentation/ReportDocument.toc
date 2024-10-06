@@ -1,18 +1,17 @@
 \contentsline {section}{\numberline {1}Class Diagram}{1}{section.1}%
 \contentsline {section}{\numberline {2}Graphical User Interface (GUI)}{2}{section.2}%
 \contentsline {section}{\numberline {3}Command Line Interface (CLI)}{2}{section.3}%
-\contentsline {section}{\numberline {4}Code Overview}{3}{section.4}%
+\contentsline {section}{\numberline {4}Code Overview}{2}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Document Hierarchy}{3}{subsection.4.1}%
 \contentsline {subsubsection}{\numberline {4.1.1}The Common Children Classes}{3}{subsubsection.4.1.1}%
 \contentsline {subsubsection}{\numberline {4.1.2}The Special Child}{4}{subsubsection.4.1.2}%
 \contentsline {subsection}{\numberline {4.2}Similarity Hierarchy}{4}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Cosine Similarity Class}{5}{subsubsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2}Euclidean Similarity Class}{5}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Cosine Similarity Class}{4}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Euclidean Similarity Class}{4}{subsubsection.4.2.2}%
 \contentsline {subsubsection}{\numberline {4.2.3}Differences between the Children}{5}{subsubsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.3}Vectorizer Hierarchy}{6}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.3}Vectorizer Hierarchy}{5}{subsection.4.3}%
 \contentsline {subsubsection}{\numberline {4.3.1}Term Frequency - Inverse Document Frequency (TF-IDF) Algorithm}{6}{subsubsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.2}Custom Algorithm: Normalized BoW}{7}{subsubsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.4}Indexer Class}{7}{subsection.4.4}%
-\contentsline {section}{\numberline {5}Code Overview: Unit Testing}{7}{section.5}%
-\contentsline {section}{\numberline {6}Tests and Results}{7}{section.6}%
-\contentsline {section}{\numberline {7}References}{7}{section.7}%
+\contentsline {subsubsection}{\numberline {4.3.2}Custom Algorithm: Normalized BoW}{6}{subsubsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.4}Indexer Class}{6}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Unit Test}{7}{section.5}%
+\contentsline {section}{\numberline {6}References}{7}{section.6}%

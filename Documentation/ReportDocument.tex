@@ -42,14 +42,17 @@ This diagram contains the end design of the program for the development of the c
 
 \section{Command Line Interface (CLI)}
 This section will explain how each command may be inputted into the command line of the program. Following are all command variants that are valid in our project.
-\begin{itemize}
-    \item[$>$] \texttt{index -f $<folderPath>$ -t tfidf -dis cosine}: this command uses the standard method for both the indexer and the search engine, the \textbf{TF-IDF} for indexing and the \textbf{Cosine Similarity} for searching values. 
-    \item[$>$] \texttt{index -f $<folderPath>$ -t tfidf -dis euclidean}: this command uses the \textbf{TF-IDF} algorithm for indexing the files and the \textbf{Euclidean Similarity} algorithm for searching values. 
-    \item[$>$] \texttt{index -f $<folderPath>$ -t vectorizer -dis euclidean}: this command uses the \textbf{Normalized Bag of Words} algorithm for indexing the files and the \textbf{Cosine Similarity} algorithm for searching values. 
-    \item[$>$] \texttt{index -f $<folderPath>$ -t vectorizer -dis cosine}: this command uses the \textbf{Normalized Bag of Words} algorithm for indexing the files and the \textbf{Euclidean Similarity} algorithm for searching values. 
-    \item[$>$] \texttt{load -p $<indexPath>$}: uses the path to the "\texttt{.Json}" document that holds the information of an indexed folder.  
-    \item[$>$] \texttt{search -q $<query>$ -k $<numberResults>$}: gets the query from the user and the number of results it should return form $<numberResults>$. 
-\end{itemize}
+\begin{figure}
+    \begin{itemize}
+        \item[$>$] \texttt{index -f $<folderPath>$ -t tfidf -dis cosine}: this command uses the standard method for both the indexer and the search engine, the \textbf{TF-IDF} for indexing and the \textbf{Cosine Similarity} for searching values. 
+        \item[$>$] \texttt{index -f $<folderPath>$ -t tfidf -dis euclidean}: this command uses the \textbf{TF-IDF} algorithm for indexing the files and the \textbf{Euclidean Similarity} algorithm for searching values. 
+        \item[$>$] \texttt{index -f $<folderPath>$ -t vectorizer -dis euclidean}: this command uses the \textbf{Normalized Bag of Words} algorithm for indexing the files and the \textbf{Cosine Similarity} algorithm for searching values. 
+        \item[$>$] \texttt{index -f $<folderPath>$ -t vectorizer -dis cosine}: this command uses the \textbf{Normalized Bag of Words} algorithm for indexing the files and the \textbf{Euclidean Similarity} algorithm for searching values. 
+        \item[$>$] \texttt{load -p $<indexPath>$}: uses the path to the "\texttt{.Json}" document that holds the information of an indexed folder.  
+        \item[$>$] \texttt{search -q $<query>$ -k $<numberResults>$}: gets the query from the user and the number of results it should return form $<numberResults>$. 
+    \end{itemize}
+    \label{fig:Commands}
+\end{figure}
 The item list mentioned before contains all valid formats of command. All values inbetween characters '$<$' and '$>$' represent variables in the command which may change depending on what the user wants. 
 
 \section{Code Overview}
@@ -211,11 +214,8 @@ For the development of this code we used \textbf{TF-IDF} algorithm as an interpr
 \subsubsection{Custom Algorithm: Normalized BoW} 
 This algorithm is the other version of the indexer we had to develop, we used a custom algorithm which mixes concepts of the \textbf{Bag of Words}\footnote{A quick explanation of the Bag of Words model is found in: \url{https://www.ibm.com/topics/bag-of-words}} algorithm for indexing, which is just considering each file as a vector which contains the count of each term in a document. We decided on  Normalizing this vector for lenghts to be reduced and for an easier manipulation. Thus, after indexing the files it is easier to handle them since the individual components of the vector now represent the overall relevance of a term in a file. It uses a similar formula to the one explained in figure \ref*{fig:TermFrequency}. This algorithm is a lot less computationally intensive and still maintains appropiate behavior when being handled by the \textbf{Search Engine}.
 \subsection{Indexer Class}
-
-\section{Code Overview: Unit Testing}
-
-\section{Tests and Results}
-
+The indexer class is in charge of linking the logic of all class hierarchies and the methods that where passed to us as requirements of this code. To create this we must look back at the figure~\ref{fig:Commands} which represent the available levels of functionality of the code. In this class all the logic that ends up retrieving the output of the program is placed here. It allows for the \textbf{GUI} and the \textbf{CLI} to use nearly identical interpretations. 
+\section{Unit Test}
+The \textbf{Unit Test} section of the code is in charge of checking that all concrete methods, have the expected behavior. We managed to test all the functionality of the code. Yet, certain tests might be missing out due to our lack of experience in developing tests. Even, though we did manage to be properly generate Unit Test for the Document, Similarity, Vectorizer and Indexer hierarchy. The Unit Testing was done in a straightforward manner, where mock documents and instances of classes where generated. For a further understanding please look at the Folder containing the \texttt{UnitTests} for all classes.
 \section{References}
-
 \end{document}
