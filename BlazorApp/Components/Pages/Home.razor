@@ -1,8 +1,10 @@
 ﻿@page "/"
 @rendermode InteractiveServer
 
-@using System.Text
 @using Classes
+@using iTextSharp.text.pdf;
+@using iTextSharp.text.pdf.parser;
+@using System.Text
 
 <PageTitle>Search Documents</PageTitle>
 
@@ -20,7 +22,7 @@
         @foreach (var result in results)
         {
             <li>
-                <a href="#" @onclick="() => OpenDocument(result)">@result</a>
+                <a href="#" @onclick="() => OpenDocument(result)">@result</a> <!-- Hyperlink for each result -->
             </li>
         }
     </ul>
@@ -30,7 +32,7 @@ else if (results != null)
     <p>No results found.</p>
 }
 
-@if (!string.IsNullOrEmpty(selectedDocumentContent))
+@if (!string.IsNullOrEmpty(selectedDocumentContent)) // Check if there is content to display
 {
     <h2>Document Content:</h2>
     <div>
@@ -41,78 +43,22 @@ else if (results != null)
 @code {
     private string query;
     private List<string> results;
-    private Indexer indexer;
-    private string selectedDocumentContent;
+    private Indexer indexer; // Declare the indexer instance
+    private string selectedDocumentContent; // To hold the content of the opened document
 
     protected override async Task OnInitializedAsync()
     {
         indexer = new Indexer();
         string folderPath = "/Users/jennifervicentesvalle/Desktop/TTU/Object-Oriented Programming/IndexerSearchEngineProj/Folders"; // Replace with actual path
-        await Task.Run(() => indexer.IndexFolder(folderPath, "tfidf", "cosine"));
-        LoadIndex();
+        await Task.Run(() => indexer.IndexFolder(folderPath, "vectorizer", "cosine")); // Index the folder
+        LoadIndex(); // Load the index after indexing
     }
 
     private void LoadIndex()
     {
         string indexPath = "/Users/jennifervicentesvalle/Desktop/TTU/Object-Oriented Programming/IndexerSearchEngineProj/Folders/index.json"; // Replace with actual path
         indexer.LoadIndex(indexPath);
-        Console.WriteLine($"Loaded {indexer.Documents.Count} documents from index.");
-    }
-
-    private async Task Search()
-    {
-        Console.WriteLine($"Query received: {query}");
-        if (!string.IsNullOrWhiteSpace(query))
-        {
-            Console.WriteLine($"Searching for: {query}");
-            try
-            {
-                results = indexer.Search(query, 10, "cosine");
-                Console.WriteLine($"Found {results.Count} results.");
-
-                foreach (var result in results)
-                {
-                    Console.WriteLine($"Result: {result}");
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error during search: {ex.Message}");
-            }
-        }
-    }
-
-    private void OpenDocument(string documentName)
-    {
-        try
-        {
-            string documentPath = $"/Users/jennifervicentesvalle/Desktop/TTU/Object-Oriented Programming/IndexerSearchEngineProj/Folders/IndexerTesting/{documentName}";
-            Console.WriteLine($"Attempting to open document at path: {documentPath}");
-
-            if (!System.IO.File.Exists(documentPath))
-            {
-                throw new FileNotFoundException($"File not found: {documentPath}");
-            }
-
-            string extension = System.IO.Path.GetExtension(documentPath).ToLower();
-
-            if (extension == ".pdf")
-            {
-                selectedDocumentContent = ReadPdfContent(documentPath);
-            }
-            else
-            {
-                selectedDocumentContent = System.IO.File.ReadAllText(documentPath);
-            }
-
-            Console.WriteLine($"Opened document: {documentName}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"Error opening document: {ex.Message}");
-            Console.WriteLine($"Exception details: {ex}");
-            selectedDocumentContent = "Error loading document content.";
-        }
+        Console.WriteLine($"Loaded {indexer.Documents.Count} documents from index."); // Debugging line
     }
 
     private string ReadPdfContent(string filePath)
@@ -123,6 +69,7 @@ else if (results != null)
         {
             for (int i = 1; i <= reader.NumberOfPages; i++)
             {
+                // Extraer el texto de cada página
                 string pageText = PdfTextExtractor.GetTextFromPage(reader, i);
                 text.Append(pageText);
             }
@@ -130,4 +77,73 @@ else if (results != null)
 
         return text.ToString();
     }
+
+private async Task Search()
+{
+    Console.WriteLine($"Query received: {query}");
+    if (!string.IsNullOrWhiteSpace(query))
+    {
+        Console.WriteLine($"Searching for: {query}");
+        try
+        {
+            results = indexer.Search(query, 10, "cosine");
+            Console.WriteLine($"Found {results.Count} results.");
+
+            if (results.Count == 0)
+            {
+                // Si no se encontraron resultados, mostrar "No documents"
+                selectedDocumentContent = "No documents";
+            }
+
+            foreach (var result in results)
+            {
+                Console.WriteLine($"Result: {result}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error during search: {ex.Message}");
+            selectedDocumentContent = "No documents."; // En caso de error, mostrar "No documents"
+        }
+    }
+    else
+    {
+        selectedDocumentContent = "No documents."; // Si la consulta está vacía
+    }
+}
+
+
+private void OpenDocument(string documentName)
+{
+    try
+    {
+        string documentPath = $"/Users/jennifervicentesvalle/Desktop/TTU/Object-Oriented Programming/IndexerSearchEngineProj/Folders/IndexerTesting/{documentName}";
+        Console.WriteLine($"Attempting to open document at path: {documentPath}");
+
+        if (!System.IO.File.Exists(documentPath))
+        {
+            throw new FileNotFoundException($"File not found: {documentPath}");
+        }
+
+        string extension = System.IO.Path.GetExtension(documentPath).ToLower();
+
+        if (extension == ".pdf")
+        {
+            selectedDocumentContent = ReadPdfContent(documentPath);
+        }
+        else
+        {
+            selectedDocumentContent = System.IO.File.ReadAllText(documentPath);
+        }
+
+        Console.WriteLine($"Opened document: {documentName}");
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error opening document: {ex.Message}");
+        selectedDocumentContent = "No documents."; // En caso de error, mostrar "No documents"
+    }
+}
+
+
 }
