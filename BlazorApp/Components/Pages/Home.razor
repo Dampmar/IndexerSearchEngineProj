@@ -113,37 +113,36 @@ private async Task Search()
 }
 
 
-private void OpenDocument(string documentName)
-{
-    try
+    private void OpenDocument(string documentName)
     {
-        string documentPath = $"/Users/jennifervicentesvalle/Desktop/TTU/Object-Oriented Programming/IndexerSearchEngineProj/Folders/IndexerTesting/{documentName}";
-        Console.WriteLine($"Attempting to open document at path: {documentPath}");
-
-        if (!System.IO.File.Exists(documentPath))
+        try
         {
-            throw new FileNotFoundException($"File not found: {documentPath}");
+            string documentPath = $"/Users/jennifervicentesvalle/Desktop/TTU/Object-Oriented Programming/IndexerSearchEngineProj/Folders/IndexerTesting/{documentName}";
+            Console.WriteLine($"Attempting to open document at path: {documentPath}");
+
+            if (!System.IO.File.Exists(documentPath))
+            {
+                throw new FileNotFoundException($"File not found: {documentPath}");
+            }
+
+            string extension = System.IO.Path.GetExtension(documentPath).ToLower();
+
+            if (extension == ".pdf")
+            {
+                selectedDocumentContent = ReadPdfContent(documentPath);
+            }
+            else
+            {
+                selectedDocumentContent = System.IO.File.ReadAllText(documentPath);
+            }
+
+            Console.WriteLine($"Opened document: {documentName}");
         }
-
-        string extension = System.IO.Path.GetExtension(documentPath).ToLower();
-
-        if (extension == ".pdf")
+        catch (Exception ex)
         {
-            selectedDocumentContent = ReadPdfContent(documentPath);
+            Console.WriteLine($"Error opening document: {ex.Message}");
+            selectedDocumentContent = "No documents."; // En caso de error, mostrar "No documents"
         }
-        else
-        {
-            selectedDocumentContent = System.IO.File.ReadAllText(documentPath);
-        }
-
-        Console.WriteLine($"Opened document: {documentName}");
     }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"Error opening document: {ex.Message}");
-        selectedDocumentContent = "No documents."; // En caso de error, mostrar "No documents"
-    }
-}
-
 
 }
