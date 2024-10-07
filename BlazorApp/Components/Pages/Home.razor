@@ -4,11 +4,30 @@
 @using Classes
 @using iTextSharp.text.pdf;
 @using iTextSharp.text.pdf.parser;
-@using System.Text
+@using System.Text;
 
 <PageTitle>Search Documents</PageTitle>
 
 <h1>Search Documents</h1>
+
+<div>
+    <h2>Select Options</h2>
+    <label for="vectorizer">Choose Vectorization Method:</label>
+    <select @bind="selectedVectorizer">
+        <option value="">Select Method</option>
+        <option value="tfidf">TFIDF</option>
+        <option value="vectorizer">Vectorizer</option>
+    </select>
+</div>
+
+<div>
+    <label for="distance">Choose Distance Metric:</label>
+    <select @bind="selectedDistance">
+        <option value="">Select Metric</option>
+        <option value="cosine">Cosine</option>
+        <option value="euclidean">Euclidean</option>
+    </select>
+</div>
 
 <div>
     <input @bind="query" placeholder="Enter your search query" />
@@ -22,7 +41,7 @@
         @foreach (var result in results)
         {
             <li>
-                <a href="#" @onclick="() => OpenDocument(result)">@result</a> <!-- Hyperlink for each result -->
+                <a href="#" @onclick="() => OpenDocument(result)">@result</a>
             </li>
         }
     </ul>
@@ -32,7 +51,7 @@ else if (results != null)
     <p>No results found.</p>
 }
 
-@if (!string.IsNullOrEmpty(selectedDocumentContent)) // Check if there is content to display
+@if (!string.IsNullOrEmpty(selectedDocumentContent))
 {
     <h2>Document Content:</h2>
     <div>
@@ -43,75 +62,87 @@ else if (results != null)
 @code {
     private string query;
     private List<string> results;
-    private Indexer indexer; // Declare the indexer instance
-    private string selectedDocumentContent; // To hold the content of the opened document
+    private Indexer indexer;
+    private string selectedDocumentContent;
+    
+    // Declaración de variables sin valores por defecto
+    private string selectedVectorizer; 
+    private string selectedDistance; 
 
     protected override async Task OnInitializedAsync()
     {
         indexer = new Indexer();
-        string folderPath = "/Users/jennifervicentesvalle/Desktop/TTU/Object-Oriented Programming/IndexerSearchEngineProj/Folders"; // Replace with actual path
-        await Task.Run(() => indexer.IndexFolder(folderPath, "vectorizer", "cosine")); // Index the folder
-        LoadIndex(); // Load the index after indexing
+        string folderPath = "/Users/jennifervicentesvalle/Desktop/TTU/Object-Oriented Programming/IndexerSearchEngineProj/Folders"; // Reemplazar con la ruta correcta
+        
+        // No se llama a IndexFolder aquí; se hace en el botón de búsqueda
+        LoadIndex(); // Cargar el índice después de indexar
     }
 
     private void LoadIndex()
     {
-        string indexPath = "/Users/jennifervicentesvalle/Desktop/TTU/Object-Oriented Programming/IndexerSearchEngineProj/Folders/index.json"; // Replace with actual path
+        string indexPath = "/Users/jennifervicentesvalle/Desktop/TTU/Object-Oriented Programming/IndexerSearchEngineProj/Folders/index.json"; // Reemplazar con la ruta correcta
         indexer.LoadIndex(indexPath);
-        Console.WriteLine($"Loaded {indexer.Documents.Count} documents from index."); // Debugging line
+        Console.WriteLine($"Loaded {indexer.Documents.Count} documents from index.");
     }
 
     private string ReadPdfContent(string filePath)
     {
         StringBuilder text = new StringBuilder();
-
         using (PdfReader reader = new PdfReader(filePath))
         {
             for (int i = 1; i <= reader.NumberOfPages; i++)
             {
-                // Extraer el texto de cada página
                 string pageText = PdfTextExtractor.GetTextFromPage(reader, i);
                 text.Append(pageText);
             }
         }
-
         return text.ToString();
     }
 
-private async Task Search()
-{
-    Console.WriteLine($"Query received: {query}");
-    if (!string.IsNullOrWhiteSpace(query))
+    private async Task Search()
     {
-        Console.WriteLine($"Searching for: {query}");
-        try
+        Console.WriteLine($"Query received: {query}");
+
+        // Verifica que se seleccionen los métodos
+        if (string.IsNullOrWhiteSpace(selectedVectorizer) || string.IsNullOrWhiteSpace(selectedDistance))
         {
-            results = indexer.Search(query, 10, "cosine");
-            Console.WriteLine($"Found {results.Count} results.");
+            selectedDocumentContent = "Please select both a vectorization method and a distance metric.";
+            return;
+        }
 
-            if (results.Count == 0)
+        if (!string.IsNullOrWhiteSpace(query))
+        {
+            Console.WriteLine($"Searching for: {query}");
+            try
             {
-                // Si no se encontraron resultados, mostrar "No documents"
-                selectedDocumentContent = "No documents";
+                // Indexar la carpeta con los métodos seleccionados
+                string folderPath = "/Users/jennifervicentesvalle/Desktop/TTU/Object-Oriented Programming/IndexerSearchEngineProj/Folders"; // Reemplazar con la ruta correcta
+                await Task.Run(() => indexer.IndexFolder(folderPath, selectedVectorizer, selectedDistance));
+
+                results = indexer.Search(query, 10, selectedDistance); // Usa la métrica de distancia seleccionada
+                Console.WriteLine($"Found {results.Count} results.");
+
+                if (results.Count == 0)
+                {
+                    selectedDocumentContent = "No documents";
+                }
+
+                foreach (var result in results)
+                {
+                    Console.WriteLine($"Result: {result}");
+                }
             }
-
-            foreach (var result in results)
+            catch (Exception ex)
             {
-                Console.WriteLine($"Result: {result}");
+                Console.WriteLine($"Error during search: {ex.Message}");
+                selectedDocumentContent = "No documents."; 
             }
         }
-        catch (Exception ex)
+        else
         {
-            Console.WriteLine($"Error during search: {ex.Message}");
-            selectedDocumentContent = "No documents."; // En caso de error, mostrar "No documents"
+            selectedDocumentContent = "No documents."; 
         }
     }
-    else
-    {
-        selectedDocumentContent = "No documents."; // Si la consulta está vacía
-    }
-}
-
 
     private void OpenDocument(string documentName)
     {
@@ -141,8 +172,7 @@ private async Task Search()
         catch (Exception ex)
         {
             Console.WriteLine($"Error opening document: {ex.Message}");
-            selectedDocumentContent = "No documents."; // En caso de error, mostrar "No documents"
+            selectedDocumentContent = "No documents."; 
         }
     }
-
 }
