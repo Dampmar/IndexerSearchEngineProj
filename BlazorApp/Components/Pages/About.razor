@@ -1,0 +1,107 @@
+@page "/about"
+@rendermode InteractiveServer
+
+<PageTitle>About the Project</PageTitle>
+
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        margin-top: 30px;
+    }
+
+    h1 {
+        color: #333;
+        text-align: center;
+        margin-top: 20px;
+        font-weight: 300;
+    }
+
+    p {
+        color: #555;
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 15px 0;
+    }
+
+    .developers {
+        margin-top: 30px;
+    }
+
+    .developers h2 {
+        color: #333;
+        font-weight: 300;
+    }
+
+    .developers ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .developers ul li {
+        margin: 10px 0;
+        font-size: 16px;
+        color: #555;
+    }
+
+    .developers ul li span {
+        font-weight: bold;
+    }
+
+</style>
+
+<div class="container">
+    <h1>Project Overview</h1>
+
+    <p>
+        <strong>Project 1 – Indexer/Search</strong> is part of the Fall 2024 curriculum for the course 
+        <em>Object-Oriented Programming</em> at Texas Tech University. The purpose of this project is to develop a 
+        simple but effective indexer/search engine that allows users to search through various types of documents, 
+        such as text files, PDFs, and others, using an efficient algorithmic approach.
+    </p>
+
+    <p>
+        The search engine supports recursive folder indexing, which enables users to retrieve relevant documents based on a 
+        given query. The project focuses on implementing well-known algorithms such as <strong>TF-IDF</strong> for document 
+        indexing and <strong>Cosine Similarity</strong> for determining the similarity between documents. 
+    </p>
+
+    <p>
+        This project provides two main interaction interfaces: a <strong>Command Line Interface (CLI)</strong> and a 
+        <strong>Graphical User Interface (GUI)</strong>. Both interfaces adhere to good Object-Oriented Programming (OOP) 
+        practices and the SOLID principles. The system is also designed with extensibility in mind, allowing for the future 
+        addition of new file types without major structural changes to the existing code.
+    </p>
+
+    <p>
+        As search engines like Google have shown, indexing and searching through large collections of documents is 
+        crucial in the modern information age. While our project operates on a much smaller scale, it mimics the core 
+        principles behind search engines and highlights the importance of data indexing and efficient retrieval.
+    </p>
+
+    <div class="developers">
+        <h2>Developers</h2>
+        <ul>
+            <li>
+                <span>Daniel Marin</span><br />
+                Junior, Texas Tech University, Fall 2024
+            </li>
+            <li>
+                <span>Jennifer Vicentes</span><br />
+                Junior, Texas Tech University, Fall 2024
+            </li>
+        </ul>
+    </div>
+</div>
+

@@ -8,56 +8,153 @@
 
 <PageTitle>Search Documents</PageTitle>
 
-<h1>Search Documents</h1>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
 
-<div>
-    <h2>Select Options</h2>
-    <label for="vectorizer">Choose Vectorization Method:</label>
-    <select @bind="selectedVectorizer">
-        <option value="">Select Method</option>
-        <option value="tfidf">TFIDF</option>
-        <option value="vectorizer">Vectorizer</option>
-    </select>
-</div>
+    h1, h2 {
+        color: #333;
+        text-align: center;
+        margin-top: 20px;
+        font-weight: 300;
+    }
 
-<div>
-    <label for="distance">Choose Distance Metric:</label>
-    <select @bind="selectedDistance">
-        <option value="">Select Metric</option>
-        <option value="cosine">Cosine</option>
-        <option value="euclidean">Euclidean</option>
-    </select>
-</div>
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        margin-top: 30px;
+    }
 
-<div>
-    <input @bind="query" placeholder="Enter your search query" />
-    <button class="btn btn-primary" @onclick="Search">Search</button>
-</div>
+    label {
+        font-size: 16px;
+        color: #555;
+    }
 
-@if (results != null && results.Any())
-{
-    <h2>Search Results:</h2>
-    <ul>
-        @foreach (var result in results)
-        {
-            <li>
-                <a href="#" @onclick="() => OpenDocument(result)">@result</a>
-            </li>
-        }
-    </ul>
-}
-else if (results != null)
-{
-    <p>No results found.</p>
-}
+    select, input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+    }
 
-@if (!string.IsNullOrEmpty(selectedDocumentContent))
-{
-    <h2>Document Content:</h2>
+    .btn {
+        background-color: #4285f4;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+        background-color: #357ae8;
+    }
+
+    .search-results {
+        margin-top: 20px;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    ul li {
+        margin: 10px 0;
+    }
+
+    ul li a {
+        color: #4285f4;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+    ul li a:hover {
+        text-decoration: underline;
+    }
+
+    .no-results {
+        color: #e74c3c;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .document-content {
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        white-space: pre-wrap;
+    }
+</style>
+
+<div class="container">
+    <h1>Search Documents</h1>
+
     <div>
-        @selectedDocumentContent
+        <h2>Select Options</h2>
+        <label for="vectorizer">Choose Vectorization Method:</label>
+        <select @bind="selectedVectorizer">
+            <option value="">Select Method</option>
+            <option value="tfidf">TFIDF</option>
+            <option value="vectorizer">Vectorizer</option>
+        </select>
     </div>
-}
+
+    <div>
+        <label for="distance">Choose Distance Metric:</label>
+        <select @bind="selectedDistance">
+            <option value="">Select Metric</option>
+            <option value="cosine">Cosine</option>
+            <option value="euclidean">Euclidean</option>
+        </select>
+    </div>
+
+    <div>
+        <input @bind="query" placeholder="Enter your search query" />
+        <button class="btn" @onclick="Search">Search</button>
+    </div>
+
+    @if (results != null && results.Any())
+    {
+        <div class="search-results">
+            <h2>Search Results:</h2>
+            <ul>
+                @foreach (var result in results)
+                {
+                    <li>
+                        <a href="#" @onclick="() => OpenDocument(result)">@result</a>
+                    </li>
+                }
+            </ul>
+        </div>
+    }
+    else if (results != null)
+    {
+        <p class="no-results">No results found.</p>
+    }
+
+    @if (!string.IsNullOrEmpty(selectedDocumentContent))
+    {
+        <h2>Document Content:</h2>
+        <div class="document-content">
+            @selectedDocumentContent
+        </div>
+    }
+</div>
 
 @code {
     private string query;
@@ -65,7 +162,6 @@ else if (results != null)
     private Indexer indexer;
     private string selectedDocumentContent;
     
-    // Declaración de variables sin valores por defecto
     private string selectedVectorizer; 
     private string selectedDistance; 
 
@@ -73,9 +169,7 @@ else if (results != null)
     {
         indexer = new Indexer();
         string folderPath = "/Users/jennifervicentesvalle/Desktop/TTU/Object-Oriented Programming/IndexerSearchEngineProj/Folders"; // Reemplazar con la ruta correcta
-        
-        // No se llama a IndexFolder aquí; se hace en el botón de búsqueda
-        LoadIndex(); // Cargar el índice después de indexar
+        LoadIndex(); 
     }
 
     private void LoadIndex()
@@ -103,7 +197,6 @@ else if (results != null)
     {
         Console.WriteLine($"Query received: {query}");
 
-        // Verifica que se seleccionen los métodos
         if (string.IsNullOrWhiteSpace(selectedVectorizer) || string.IsNullOrWhiteSpace(selectedDistance))
         {
             selectedDocumentContent = "Please select both a vectorization method and a distance metric.";
@@ -115,11 +208,10 @@ else if (results != null)
             Console.WriteLine($"Searching for: {query}");
             try
             {
-                // Indexar la carpeta con los métodos seleccionados
                 string folderPath = "/Users/jennifervicentesvalle/Desktop/TTU/Object-Oriented Programming/IndexerSearchEngineProj/Folders"; // Reemplazar con la ruta correcta
                 await Task.Run(() => indexer.IndexFolder(folderPath, selectedVectorizer, selectedDistance));
 
-                results = indexer.Search(query, 10, selectedDistance); // Usa la métrica de distancia seleccionada
+                results = indexer.Search(query, 10, selectedDistance); 
                 Console.WriteLine($"Found {results.Count} results.");
 
                 if (results.Count == 0)
