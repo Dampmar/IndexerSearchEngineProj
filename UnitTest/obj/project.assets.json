@@ -11,6 +11,19 @@
           "lib/BouncyCastle.Crypto.dll": {}
         }
       },
+      "BouncyCastle.Cryptography/2.2.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/BouncyCastle.Cryptography.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/BouncyCastle.Cryptography.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Castle.Core/5.1.1": {
         "type": "package",
         "dependencies": {
@@ -149,6 +162,43 @@
           }
         }
       },
+      "itext.bouncy-castle-adapter/8.0.5": {
+        "type": "package",
+        "dependencies": {
+          "BouncyCastle.Cryptography": "2.2.1",
+          "itext.commons": "8.0.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/itext.bouncy-castle-adapter.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/itext.bouncy-castle-adapter.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "itext.bouncy-castle-fips-adapter/8.0.5": {
+        "type": "package",
+        "dependencies": {
+          "itext.commons": "8.0.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/bc-fips-1.0.2.dll": {},
+          "lib/netstandard2.0/bcpkix-fips-1.0.2.dll": {},
+          "lib/netstandard2.0/itext.bouncy-castle-fips-adapter.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/bc-fips-1.0.2.dll": {},
+          "lib/netstandard2.0/bcpkix-fips-1.0.2.dll": {},
+          "lib/netstandard2.0/itext.bouncy-castle-fips-adapter.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "itext.commons/8.0.5": {
         "type": "package",
         "dependencies": {
@@ -170,6 +220,18 @@
         "type": "package",
         "dependencies": {
           "itext": "8.0.5"
+        }
+      },
+      "itext7.bouncy-castle-adapter/8.0.5": {
+        "type": "package",
+        "dependencies": {
+          "itext.bouncy-castle-adapter": "8.0.5"
+        }
+      },
+      "itext7.bouncy-castle-fips-adapter/8.0.5": {
+        "type": "package",
+        "dependencies": {
+          "itext.bouncy-castle-fips-adapter": "8.0.5"
         }
       },
       "Microsoft.CodeCoverage/17.8.0": {
@@ -1866,6 +1928,26 @@
         "lib/BouncyCastle.Crypto.dll"
       ]
     },
+    "BouncyCastle.Cryptography/2.2.1": {
+      "sha512": "A6Zr52zVqJKt18ZBsTnX0qhG0kwIQftVAjLmszmkiR/trSp8H+xj1gUOzk7XHwaKgyREMSV1v9XaKrBUeIOdvQ==",
+      "type": "package",
+      "path": "bouncycastle.cryptography/2.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "bouncycastle.cryptography.2.2.1.nupkg.sha512",
+        "bouncycastle.cryptography.nuspec",
+        "lib/net461/BouncyCastle.Cryptography.dll",
+        "lib/net461/BouncyCastle.Cryptography.xml",
+        "lib/net6.0/BouncyCastle.Cryptography.dll",
+        "lib/net6.0/BouncyCastle.Cryptography.xml",
+        "lib/netstandard2.0/BouncyCastle.Cryptography.dll",
+        "lib/netstandard2.0/BouncyCastle.Cryptography.xml",
+        "packageIcon.png"
+      ]
+    },
     "Castle.Core/5.1.1": {
       "sha512": "rpYtIczkzGpf+EkZgDr9CClTdemhsrwA/W5hMoPjLkRFnXzH44zDLoovXeKtmxb1ykXK9aJVODSpiJml8CTw2g==",
       "type": "package",
@@ -2078,6 +2160,38 @@
         "lib/netstandard2.0/itext.svg.xml"
       ]
     },
+    "itext.bouncy-castle-adapter/8.0.5": {
+      "sha512": "mam0CtYkKmVwdX7wU1Zlg9oVW0B9efMASfAEIm+fQGovc9HcplsmP3MylS+VmQHbYlCNSH68DQlVhDz6Cu9WxQ==",
+      "type": "package",
+      "path": "itext.bouncy-castle-adapter/8.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ITSC-avatar.png",
+        "itext.bouncy-castle-adapter.8.0.5.nupkg.sha512",
+        "itext.bouncy-castle-adapter.nuspec",
+        "lib/net461/itext.bouncy-castle-adapter.dll",
+        "lib/net461/itext.bouncy-castle-adapter.xml",
+        "lib/netstandard2.0/itext.bouncy-castle-adapter.dll",
+        "lib/netstandard2.0/itext.bouncy-castle-adapter.xml"
+      ]
+    },
+    "itext.bouncy-castle-fips-adapter/8.0.5": {
+      "sha512": "ELlh9H/xwOICIdtb1YB4pWKFTOwgiSPpwOKlcRdQUpUT7s5q+C8iB4gHI4Unfv9i7dh626elz6Cbi8crmMvQcA==",
+      "type": "package",
+      "path": "itext.bouncy-castle-fips-adapter/8.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ITSC-avatar.png",
+        "itext.bouncy-castle-fips-adapter.8.0.5.nupkg.sha512",
+        "itext.bouncy-castle-fips-adapter.nuspec",
+        "lib/netstandard2.0/bc-fips-1.0.2.dll",
+        "lib/netstandard2.0/bcpkix-fips-1.0.2.dll",
+        "lib/netstandard2.0/itext.bouncy-castle-fips-adapter.dll",
+        "lib/netstandard2.0/itext.bouncy-castle-fips-adapter.xml"
+      ]
+    },
     "itext.commons/8.0.5": {
       "sha512": "exnLqeWOnn0Ee393bHf3zWTmcYuQfYuj7iIbMluG49XFczMWMMXrN9UvMmt5iYOKq0mGZsYb1eRoVATGuDiXGQ==",
       "type": "package",
@@ -2106,6 +2220,34 @@
         "gnu-agpl-v3.0.md",
         "itext7.8.0.5.nupkg.sha512",
         "itext7.nuspec"
+      ]
+    },
+    "itext7.bouncy-castle-adapter/8.0.5": {
+      "sha512": "9jpalaOyxbcuhbl9yJJQGXdseKUFrKlUjjcjIvReb3Qz4Aw0F+WNXKOo0sax87TGGNb66fyHsfJib3JTnfzRYw==",
+      "type": "package",
+      "path": "itext7.bouncy-castle-adapter/8.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ITSC-avatar.png",
+        "LICENSE.md",
+        "gnu-agpl-v3.0.md",
+        "itext7.bouncy-castle-adapter.8.0.5.nupkg.sha512",
+        "itext7.bouncy-castle-adapter.nuspec"
+      ]
+    },
+    "itext7.bouncy-castle-fips-adapter/8.0.5": {
+      "sha512": "sIKa6UcsCv3aNscxDv/QUaTKKv7/PLTtYC2nhcCNb2QV7zoRAWuQWWVE+nz0PGw7yIme9j89CT9p1IhVjjQJLg==",
+      "type": "package",
+      "path": "itext7.bouncy-castle-fips-adapter/8.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ITSC-avatar.png",
+        "LICENSE.md",
+        "gnu-agpl-v3.0.md",
+        "itext7.bouncy-castle-fips-adapter.8.0.5.nupkg.sha512",
+        "itext7.bouncy-castle-fips-adapter.nuspec"
       ]
     },
     "Microsoft.CodeCoverage/17.8.0": {
@@ -5875,38 +6017,38 @@
       "Microsoft.NET.Test.Sdk >= 17.8.0",
       "Moq >= 4.20.72",
       "coverlet.collector >= 6.0.0",
-      "itext7 >= 8.0.5"
+      "itext7 >= 8.0.5",
+      "itext7.bouncy-castle-adapter >= 8.0.5",
+      "itext7.bouncy-castle-fips-adapter >= 8.0.5"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Usuario\\.nuget\\packages\\": {}
+    "/Users/jennifervicentesvalle/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\Git Repositories\\IndexerSearchEngineProj\\UnitTest\\UnitTest.csproj",
+      "projectUniqueName": "/Users/jennifervicentesvalle/Desktop/TTU/Object-Oriented Programming/IndexerSearchEngineProj/UnitTest/UnitTest.csproj",
       "projectName": "UnitTest",
-      "projectPath": "C:\\Users\\Usuario\\Desktop\\Git Repositories\\IndexerSearchEngineProj\\UnitTest\\UnitTest.csproj",
-      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\Desktop\\Git Repositories\\IndexerSearchEngineProj\\UnitTest\\obj\\",
+      "projectPath": "/Users/jennifervicentesvalle/Desktop/TTU/Object-Oriented Programming/IndexerSearchEngineProj/UnitTest/UnitTest.csproj",
+      "packagesPath": "/Users/jennifervicentesvalle/.nuget/packages/",
+      "outputPath": "/Users/jennifervicentesvalle/Desktop/TTU/Object-Oriented Programming/IndexerSearchEngineProj/UnitTest/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/jennifervicentesvalle/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Usuario\\Desktop\\Git Repositories\\IndexerSearchEngineProj\\Classes\\Classes.csproj": {
-              "projectPath": "C:\\Users\\Usuario\\Desktop\\Git Repositories\\IndexerSearchEngineProj\\Classes\\Classes.csproj"
+            "/Users/jennifervicentesvalle/Desktop/TTU/Object-Oriented Programming/IndexerSearchEngineProj/Classes/Classes.csproj": {
+              "projectPath": "/Users/jennifervicentesvalle/Desktop/TTU/Object-Oriented Programming/IndexerSearchEngineProj/Classes/Classes.csproj"
             }
           }
         }
@@ -5915,11 +6057,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -5953,6 +6090,14 @@
           "itext7": {
             "target": "Package",
             "version": "[8.0.5, )"
+          },
+          "itext7.bouncy-castle-adapter": {
+            "target": "Package",
+            "version": "[8.0.5, )"
+          },
+          "itext7.bouncy-castle-fips-adapter": {
+            "target": "Package",
+            "version": "[8.0.5, )"
           }
         },
         "imports": [
@@ -5971,7 +6116,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/8.0.4/libexec/sdk/8.0.104/PortableRuntimeIdentifierGraph.json"
       }
     }
   },

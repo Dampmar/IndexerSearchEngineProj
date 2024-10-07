@@ -7,7 +7,6 @@ using iText.Layout.Element;
 using System.IO;
 
 
-/*
 [TestClass]
 public class PDFDocument_UnitTest
 {
@@ -53,4 +52,4 @@ public class PDFDocument_UnitTest
     {
         if (File.Exists(_testFilePath)) File.Delete(_testFilePath);
     }
-}*/
+}

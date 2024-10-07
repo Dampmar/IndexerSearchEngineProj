@@ -13,8 +13,11 @@
           "MSTest.TestAdapter": "3.1.1",
           "MSTest.TestFramework": "3.1.1",
           "Microsoft.NET.Test.Sdk": "17.8.0",
+          "Moq": "4.20.72",
           "coverlet.collector": "6.0.0",
           "itext7": "8.0.5",
+          "itext7.bouncy-castle-adapter": "8.0.5",
+          "itext7.bouncy-castle-fips-adapter": "8.0.5",
           "Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions": "14.0.0.0"
         },
         "runtime": {
@@ -26,6 +29,25 @@
           "lib/BouncyCastle.Crypto.dll": {
             "assemblyVersion": "1.8.9.0",
             "fileVersion": "1.8.20343.1"
+          }
+        }
+      },
+      "BouncyCastle.Cryptography/2.2.1": {
+        "runtime": {
+          "lib/net6.0/BouncyCastle.Cryptography.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.2.1.47552"
+          }
+        }
+      },
+      "Castle.Core/5.1.1": {
+        "dependencies": {
+          "System.Diagnostics.EventLog": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Castle.Core.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.1.1.0"
           }
         }
       },
@@ -111,6 +133,37 @@
           }
         }
       },
+      "itext.bouncy-castle-adapter/8.0.5": {
+        "dependencies": {
+          "BouncyCastle.Cryptography": "2.2.1",
+          "itext.commons": "8.0.5"
+        },
+        "runtime": {
+          "lib/netstandard2.0/itext.bouncy-castle-adapter.dll": {
+            "assemblyVersion": "8.0.5.0",
+            "fileVersion": "8.0.5.0"
+          }
+        }
+      },
+      "itext.bouncy-castle-fips-adapter/8.0.5": {
+        "dependencies": {
+          "itext.commons": "8.0.5"
+        },
+        "runtime": {
+          "lib/netstandard2.0/bc-fips-1.0.2.dll": {
+            "assemblyVersion": "1.0.2.0",
+            "fileVersion": "0.0.0.0"
+          },
+          "lib/netstandard2.0/bcpkix-fips-1.0.2.dll": {
+            "assemblyVersion": "1.0.2.0",
+            "fileVersion": "1.0.23058.1"
+          },
+          "lib/netstandard2.0/itext.bouncy-castle-fips-adapter.dll": {
+            "assemblyVersion": "8.0.5.0",
+            "fileVersion": "8.0.5.0"
+          }
+        }
+      },
       "itext.commons/8.0.5": {
         "dependencies": {
           "Microsoft.Extensions.Logging": "5.0.0",
@@ -126,6 +179,16 @@
       "itext7/8.0.5": {
         "dependencies": {
           "itext": "8.0.5"
+        }
+      },
+      "itext7.bouncy-castle-adapter/8.0.5": {
+        "dependencies": {
+          "itext.bouncy-castle-adapter": "8.0.5"
+        }
+      },
+      "itext7.bouncy-castle-fips-adapter/8.0.5": {
+        "dependencies": {
+          "itext.bouncy-castle-fips-adapter": "8.0.5"
         }
       },
       "Microsoft.CodeCoverage/17.8.0": {
@@ -504,6 +567,17 @@
           "System.Runtime.InteropServices": "4.3.0"
         }
       },
+      "Moq/4.20.72": {
+        "dependencies": {
+          "Castle.Core": "5.1.1"
+        },
+        "runtime": {
+          "lib/net6.0/Moq.dll": {
+            "assemblyVersion": "4.20.72.0",
+            "fileVersion": "4.20.72.0"
+          }
+        }
+      },
       "MSTest.TestAdapter/3.1.1": {},
       "MSTest.TestFramework/3.1.1": {
         "runtime": {
@@ -655,6 +729,28 @@
           "Microsoft.NETCore.Platforms": "1.1.1",
           "Microsoft.NETCore.Targets": "1.1.3",
           "System.Runtime": "4.3.1"
+        }
+      },
+      "System.Diagnostics.EventLog/6.0.0": {
+        "runtime": {
+          "lib/net6.0/System.Diagnostics.EventLog.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net6.0/System.Diagnostics.EventLog.Messages.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          },
+          "runtimes/win/lib/net6.0/System.Diagnostics.EventLog.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
         }
       },
       "System.Diagnostics.Process/4.3.0": {
@@ -1096,10 +1192,7 @@
           "itext": "8.0.5"
         },
         "runtime": {
-          "Classes.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Classes.dll": {}
         }
       },
       "Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions/14.0.0.0": {
@@ -1124,6 +1217,20 @@
       "sha512": "sha512-axnBgvdD5n+FnEG6efk/tfKuMFru7R/EoISH9zjh319yb3HD24TEHSAbNN/lTRT2ulOGRxDgOsCjkuk08iwWPg==",
       "path": "bouncycastle/1.8.9",
       "hashPath": "bouncycastle.1.8.9.nupkg.sha512"
+    },
+    "BouncyCastle.Cryptography/2.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-A6Zr52zVqJKt18ZBsTnX0qhG0kwIQftVAjLmszmkiR/trSp8H+xj1gUOzk7XHwaKgyREMSV1v9XaKrBUeIOdvQ==",
+      "path": "bouncycastle.cryptography/2.2.1",
+      "hashPath": "bouncycastle.cryptography.2.2.1.nupkg.sha512"
+    },
+    "Castle.Core/5.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rpYtIczkzGpf+EkZgDr9CClTdemhsrwA/W5hMoPjLkRFnXzH44zDLoovXeKtmxb1ykXK9aJVODSpiJml8CTw2g==",
+      "path": "castle.core/5.1.1",
+      "hashPath": "castle.core.5.1.1.nupkg.sha512"
     },
     "coverlet.collector/6.0.0": {
       "type": "package",
@@ -1153,6 +1260,20 @@
       "path": "itext/8.0.5",
       "hashPath": "itext.8.0.5.nupkg.sha512"
     },
+    "itext.bouncy-castle-adapter/8.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mam0CtYkKmVwdX7wU1Zlg9oVW0B9efMASfAEIm+fQGovc9HcplsmP3MylS+VmQHbYlCNSH68DQlVhDz6Cu9WxQ==",
+      "path": "itext.bouncy-castle-adapter/8.0.5",
+      "hashPath": "itext.bouncy-castle-adapter.8.0.5.nupkg.sha512"
+    },
+    "itext.bouncy-castle-fips-adapter/8.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ELlh9H/xwOICIdtb1YB4pWKFTOwgiSPpwOKlcRdQUpUT7s5q+C8iB4gHI4Unfv9i7dh626elz6Cbi8crmMvQcA==",
+      "path": "itext.bouncy-castle-fips-adapter/8.0.5",
+      "hashPath": "itext.bouncy-castle-fips-adapter.8.0.5.nupkg.sha512"
+    },
     "itext.commons/8.0.5": {
       "type": "package",
       "serviceable": true,
@@ -1166,6 +1287,20 @@
       "sha512": "sha512-/1btEFYY+ncIR7j/g+pr26PX8Nbly8pbdDWfSHQq9E/rbxhz0ylkOLVpXNEvoaV545q508P8hociHaRiRG7bwg==",
       "path": "itext7/8.0.5",
       "hashPath": "itext7.8.0.5.nupkg.sha512"
+    },
+    "itext7.bouncy-castle-adapter/8.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9jpalaOyxbcuhbl9yJJQGXdseKUFrKlUjjcjIvReb3Qz4Aw0F+WNXKOo0sax87TGGNb66fyHsfJib3JTnfzRYw==",
+      "path": "itext7.bouncy-castle-adapter/8.0.5",
+      "hashPath": "itext7.bouncy-castle-adapter.8.0.5.nupkg.sha512"
+    },
+    "itext7.bouncy-castle-fips-adapter/8.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sIKa6UcsCv3aNscxDv/QUaTKKv7/PLTtYC2nhcCNb2QV7zoRAWuQWWVE+nz0PGw7yIme9j89CT9p1IhVjjQJLg==",
+      "path": "itext7.bouncy-castle-fips-adapter/8.0.5",
+      "hashPath": "itext7.bouncy-castle-fips-adapter.8.0.5.nupkg.sha512"
     },
     "Microsoft.CodeCoverage/17.8.0": {
       "type": "package",
@@ -1278,6 +1413,13 @@
       "sha512": "sha512-Lw1/VwLH1yxz6SfFEjVRCN0pnflLEsWgnV4qsdJ512/HhTwnKXUG+zDQ4yTO3K/EJQemGoNaBHX5InISNKTzUQ==",
       "path": "microsoft.win32.registry/4.3.0",
       "hashPath": "microsoft.win32.registry.4.3.0.nupkg.sha512"
+    },
+    "Moq/4.20.72": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EA55cjyNn8eTNWrgrdZJH5QLFp2L43oxl1tlkoYUKIE9pRwL784OWiTXeCV5ApS+AMYEAlt7Fo03A2XfouvHmQ==",
+      "path": "moq/4.20.72",
+      "hashPath": "moq.4.20.72.nupkg.sha512"
     },
     "MSTest.TestAdapter/3.1.1": {
       "type": "package",
@@ -1446,6 +1588,13 @@
       "sha512": "sha512-ZUhUOdqmaG5Jk3Xdb8xi5kIyQYAA4PnTNlHx1mu9ZY3qv4ELIdKbnL/akbGaKi2RnNUWaZsAs31rvzFdewTj2g==",
       "path": "system.diagnostics.debug/4.3.0",
       "hashPath": "system.diagnostics.debug.4.3.0.nupkg.sha512"
+    },
+    "System.Diagnostics.EventLog/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lcyUiXTsETK2ALsZrX+nWuHSIQeazhqPphLfaRxzdGaG93+0kELqpgEHtwWOlQe7+jSFnKwaCAgL4kjeZCQJnw==",
+      "path": "system.diagnostics.eventlog/6.0.0",
+      "hashPath": "system.diagnostics.eventlog.6.0.0.nupkg.sha512"
     },
     "System.Diagnostics.Process/4.3.0": {
       "type": "package",
