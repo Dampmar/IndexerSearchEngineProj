@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.27)  6 OCT 2024 00:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.27)  7 OCT 2024 22:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -635,74 +635,87 @@ Package hyperref Info: Link coloring OFF on input line 21.
 \tf@toc=\write5
 \openout5 = `ReportDocument.toc'.
 
-<Image_OriginalClassDiagram.jpeg, id=91, 1400.23125pt x 1113.15875pt>
+<Image_OriginalClassDiagram.jpeg, id=101, 1400.23125pt x 1113.15875pt>
 File: Image_OriginalClassDiagram.jpeg Graphic file (type jpg)
 <use Image_OriginalClassDiagram.jpeg>
 Package pdftex.def Info: Image_OriginalClassDiagram.jpeg  used on input line 28.
 (pdftex.def)             Requested size: 226.48395pt x 180.04538pt.
-<Image_UpdatedClassDiagram.png, id=92, 4015.0pt x 879.285pt>
+
+
+[1
+
+{C:/Users/Usuario/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+<Image_UpdatedClassDiagram.png, id=113, 4015.0pt x 879.285pt>
 File: Image_UpdatedClassDiagram.png Graphic file (type png)
 <use Image_UpdatedClassDiagram.png>
 Package pdftex.def Info: Image_UpdatedClassDiagram.png  used on input line 35.
 (pdftex.def)             Requested size: 452.9679pt x 99.19034pt.
 
 
-[1
-
-{C:/Users/Usuario/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./Image_OriginalClassDiagram.jpeg>]
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 47.
+[2 <./Image_OriginalClassDiagram.jpeg> <./Image_UpdatedClassDiagram.png (PNG copy)>]
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 88.
  (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 
-[2{C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./Image_UpdatedClassDiagram.png (PNG copy)>] (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+[3] (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/05/25 1.10b listings language file
 ) (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2024/05/25 1.10b (Carsten Heinz)
 )
+
+[4{C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
 LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <10> not available
-(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 122.
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 162.
 
 
-[3]
-
-[4{C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/mnsymbol/MnSymbolF.enc}]
+[5]
 <Image_CosineSimilarity.png, id=172, 1397.22pt x 354.57469pt>
 File: Image_CosineSimilarity.png Graphic file (type png)
 <use Image_CosineSimilarity.png>
-Package pdftex.def Info: Image_CosineSimilarity.png  used on input line 162.
+Package pdftex.def Info: Image_CosineSimilarity.png  used on input line 202.
 (pdftex.def)             Requested size: 452.9679pt x 114.94865pt.
 <Image_EuclideanSimilarity.png, id=176, 633.11531pt x 438.13687pt>
 File: Image_EuclideanSimilarity.png Graphic file (type png)
 <use Image_EuclideanSimilarity.png>
-Package pdftex.def Info: Image_EuclideanSimilarity.png  used on input line 168.
+Package pdftex.def Info: Image_EuclideanSimilarity.png  used on input line 208.
 (pdftex.def)             Requested size: 362.37569pt x 250.78352pt.
 
 
-[5 <./Image_CosineSimilarity.png> <./Image_EuclideanSimilarity.png>]
+[6{C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/mnsymbol/MnSymbolF.enc}]
 
-[6]
+[7 <./Image_CosineSimilarity.png> <./Image_EuclideanSimilarity.png>]
 
-[7] (ReportDocument.aux)
+LaTeX Warning: Reference `fig:Commands' on page 8 undefined on input line 257.
+
+
+
+[8]
+
+[9] (ReportDocument.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-08-30>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `ReportDocument.out' has not changed.
-(rerunfilecheck)             Checksum: 1ACF904EEDAD68005DB441A89DE293C0;3051.
+(rerunfilecheck)             Checksum: C378C1379E414708242083EEBE7C4E94;3286.
  ) 
 Here is how much of TeX's memory you used:
- 24983 strings out of 473899
- 444048 string characters out of 5725556
- 985035 words of memory out of 5000000
- 47376 multiletter control sequences out of 15000+600000
+ 24994 strings out of 473899
+ 444200 string characters out of 5725556
+ 985962 words of memory out of 5000000
+ 47380 multiletter control sequences out of 15000+600000
  576759 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,8n,93p,1004b,1280s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Usuario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/mnsymbol/MnSymbol10.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/mnsymbol/MnSymbol5.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/mnsymbol/MnSymbol7.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb>
-Output written on ReportDocument.pdf (7 pages, 859412 bytes).
+Output written on ReportDocument.pdf (9 pages, 869880 bytes).
 PDF statistics:
- 309 PDF objects out of 1000 (max. 8388607)
- 72 named destinations out of 1000 (max. 500000)
- 169 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 332 PDF objects out of 1000 (max. 8388607)
+ 79 named destinations out of 1000 (max. 500000)
+ 185 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,17 +1,19 @@
 \contentsline {section}{\numberline {1}Class Diagram}{1}{section.1}%
 \contentsline {section}{\numberline {2}Graphical User Interface (GUI)}{2}{section.2}%
-\contentsline {section}{\numberline {3}Command Line Interface (CLI)}{2}{section.3}%
-\contentsline {section}{\numberline {4}Code Overview}{2}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Document Hierarchy}{3}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}The Common Children Classes}{3}{subsubsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}The Special Child}{4}{subsubsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.2}Similarity Hierarchy}{4}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Cosine Similarity Class}{4}{subsubsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2}Euclidean Similarity Class}{4}{subsubsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.3}Differences between the Children}{5}{subsubsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.3}Vectorizer Hierarchy}{5}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}Term Frequency - Inverse Document Frequency (TF-IDF) Algorithm}{6}{subsubsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.2}Custom Algorithm: Normalized BoW}{6}{subsubsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.4}Indexer Class}{6}{subsection.4.4}%
-\contentsline {section}{\numberline {5}Unit Test}{7}{section.5}%
-\contentsline {section}{\numberline {6}References}{7}{section.6}%
+\contentsline {subsection}{\numberline {2.1}How It Works}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}About Page}{3}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Command Line Interface (CLI)}{4}{section.3}%
+\contentsline {section}{\numberline {4}Code Overview}{4}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Document Hierarchy}{4}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}The Common Children Classes}{5}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}The Special Child}{5}{subsubsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.2}Similarity Hierarchy}{6}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Cosine Similarity Class}{6}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Euclidean Similarity Class}{6}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Differences between the Children}{7}{subsubsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.3}Vectorizer Hierarchy}{7}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Term Frequency - Inverse Document Frequency (TF-IDF) Algorithm}{8}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Custom Algorithm: Normalized BoW}{8}{subsubsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.4}Indexer Class}{8}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Unit Test}{9}{section.5}%
+\contentsline {section}{\numberline {6}References}{9}{section.6}%

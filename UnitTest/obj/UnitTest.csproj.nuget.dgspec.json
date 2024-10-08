@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jennifervicentesvalle/Desktop/TTU/Object-Oriented Programming/IndexerSearchEngineProj/UnitTest/UnitTest.csproj": {}
+    "C:\\Users\\Usuario\\Desktop\\Git Repositories\\IndexerSearchEngineProj\\UnitTest\\UnitTest.csproj": {}
   },
   "projects": {
-    "/Users/jennifervicentesvalle/Desktop/TTU/Object-Oriented Programming/IndexerSearchEngineProj/Classes/Classes.csproj": {
+    "C:\\Users\\Usuario\\Desktop\\Git Repositories\\IndexerSearchEngineProj\\Classes\\Classes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jennifervicentesvalle/Desktop/TTU/Object-Oriented Programming/IndexerSearchEngineProj/Classes/Classes.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\Git Repositories\\IndexerSearchEngineProj\\Classes\\Classes.csproj",
         "projectName": "Classes",
-        "projectPath": "/Users/jennifervicentesvalle/Desktop/TTU/Object-Oriented Programming/IndexerSearchEngineProj/Classes/Classes.csproj",
-        "packagesPath": "/Users/jennifervicentesvalle/.nuget/packages/",
-        "outputPath": "/Users/jennifervicentesvalle/Desktop/TTU/Object-Oriented Programming/IndexerSearchEngineProj/Classes/obj/",
+        "projectPath": "C:\\Users\\Usuario\\Desktop\\Git Repositories\\IndexerSearchEngineProj\\Classes\\Classes.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuario\\Desktop\\Git Repositories\\IndexerSearchEngineProj\\Classes\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/jennifervicentesvalle/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -32,6 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -75,34 +82,36 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/8.0.4/libexec/sdk/8.0.104/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/jennifervicentesvalle/Desktop/TTU/Object-Oriented Programming/IndexerSearchEngineProj/UnitTest/UnitTest.csproj": {
+    "C:\\Users\\Usuario\\Desktop\\Git Repositories\\IndexerSearchEngineProj\\UnitTest\\UnitTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jennifervicentesvalle/Desktop/TTU/Object-Oriented Programming/IndexerSearchEngineProj/UnitTest/UnitTest.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\Git Repositories\\IndexerSearchEngineProj\\UnitTest\\UnitTest.csproj",
         "projectName": "UnitTest",
-        "projectPath": "/Users/jennifervicentesvalle/Desktop/TTU/Object-Oriented Programming/IndexerSearchEngineProj/UnitTest/UnitTest.csproj",
-        "packagesPath": "/Users/jennifervicentesvalle/.nuget/packages/",
-        "outputPath": "/Users/jennifervicentesvalle/Desktop/TTU/Object-Oriented Programming/IndexerSearchEngineProj/UnitTest/obj/",
+        "projectPath": "C:\\Users\\Usuario\\Desktop\\Git Repositories\\IndexerSearchEngineProj\\UnitTest\\UnitTest.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuario\\Desktop\\Git Repositories\\IndexerSearchEngineProj\\UnitTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/jennifervicentesvalle/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/jennifervicentesvalle/Desktop/TTU/Object-Oriented Programming/IndexerSearchEngineProj/Classes/Classes.csproj": {
-                "projectPath": "/Users/jennifervicentesvalle/Desktop/TTU/Object-Oriented Programming/IndexerSearchEngineProj/Classes/Classes.csproj"
+              "C:\\Users\\Usuario\\Desktop\\Git Repositories\\IndexerSearchEngineProj\\Classes\\Classes.csproj": {
+                "projectPath": "C:\\Users\\Usuario\\Desktop\\Git Repositories\\IndexerSearchEngineProj\\Classes\\Classes.csproj"
               }
             }
           }
@@ -111,6 +120,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -170,7 +184,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/8.0.4/libexec/sdk/8.0.104/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
