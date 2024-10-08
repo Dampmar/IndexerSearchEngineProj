@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/UnitTest/FilesUnitTest",
-      "program": "/Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/UnitTest/FilesUnitTest/build/Debug/outDebug"
+      "cwd": "/Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/Documentation",
+      "program": "/Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/Documentation/build/Debug/outDebug"
     }
   ]
 }

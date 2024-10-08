@@ -37,6 +37,14 @@ This diagram managed to encompass the overall design we ended up using throughou
     \label{fig:UpdatedClassDiagram}
 \end{figure}
 This diagram contains the end design of the program for the development of the code. It explains the various different classes and their relationships in the code without the need of accessing the program.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{Image_CliGuiDiagram.png}
+    \caption{Image explaining the Class Diagram we developed at the beginning.}
+    \label{fig:FinalClassDiagram}
+\end{figure}
+
+The final diagram with the end results containing the CLI and the GUI as a class are demonstrated in figure \ref*{fig:FinalClassDiagram}, both use the same format since the handling of these programs was accomodated to the same classes, with no changes on the classes but changes on the interpretations of the user's inputs.
 
 \section{Graphical User Interface (GUI)}
 The Graphical User Interface (GUI) for our project was developed using Blazor, a modern web framework that allows for the creation of interactive web applications using C sharp. Blazor enables developers to build client-side web applications with a component-based architecture, which promotes reusability and maintainability of code.
@@ -83,7 +91,7 @@ Overall, the Blazor-based GUI enhances the usability of the indexer/search engin
 
 \section{Command Line Interface (CLI)}
 This section will explain how each command may be inputted into the command line of the program. Following are all command variants that are valid in our project.
-
+\begin{figure}[H]
 \begin{itemize}
     \item[$>$] \texttt{index -f $<folderPath>$ -t tfidf -dis cosine}: this command uses the standard method for both the indexer and the search engine, the \textbf{TF-IDF} for indexing and the \textbf{Cosine Similarity} for searching values. 
     \item[$>$] \texttt{index -f $<folderPath>$ -t tfidf -dis euclidean}: this command uses the \textbf{TF-IDF} algorithm for indexing the files and the \textbf{Euclidean Similarity} algorithm for searching values. 
@@ -92,6 +100,8 @@ This section will explain how each command may be inputted into the command line
     \item[$>$] \texttt{load -p $<indexPath>$}: uses the path to the "\texttt{.Json}" document that holds the information of an indexed folder.  
     \item[$>$] \texttt{search -q $<query>$ -k $<numberResults>$}: gets the query from the user and the number of results it should return form $<numberResults>$. 
 \end{itemize}
+\label{fig:Commands}
+\end{figure}
 
 The item list mentioned before contains all valid formats of command. All values in between characters '$<$' and '$>$' represent variables in the command which may change depending on what the user wants.
 

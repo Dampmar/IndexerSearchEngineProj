@@ -1192,7 +1192,10 @@
           "itext": "8.0.5"
         },
         "runtime": {
-          "Classes.dll": {}
+          "Classes.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions/14.0.0.0": {

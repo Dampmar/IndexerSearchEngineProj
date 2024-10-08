@@ -422,3 +422,14 @@ C:/Users/Usuario/Desktop/Git Repositories/IndexerSearchEngineProj/UnitTest/bin/D
 /Users/jennifervicentesvalle/Desktop/TTU/Object-Oriented Programming/IndexerSearchEngineProj/UnitTest/bin/Debug/net8.0/bc-fips-1.0.2.dll
 /Users/jennifervicentesvalle/Desktop/TTU/Object-Oriented Programming/IndexerSearchEngineProj/UnitTest/bin/Debug/net8.0/bcpkix-fips-1.0.2.dll
 /Users/jennifervicentesvalle/Desktop/TTU/Object-Oriented Programming/IndexerSearchEngineProj/UnitTest/bin/Debug/net8.0/itext.bouncy-castle-fips-adapter.dll
+/Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/UnitTest/bin/Debug/net8.0/BouncyCastle.Crypto.dll
+/Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/UnitTest/bin/Debug/net8.0/BouncyCastle.Cryptography.dll
+/Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/UnitTest/bin/Debug/net8.0/Castle.Core.dll
+/Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/UnitTest/bin/Debug/net8.0/itext.bouncy-castle-adapter.dll
+/Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/UnitTest/bin/Debug/net8.0/bc-fips-1.0.2.dll
+/Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/UnitTest/bin/Debug/net8.0/bcpkix-fips-1.0.2.dll
+/Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/UnitTest/bin/Debug/net8.0/itext.bouncy-castle-fips-adapter.dll
+/Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/UnitTest/bin/Debug/net8.0/Moq.dll
+/Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/UnitTest/bin/Debug/net8.0/System.Diagnostics.EventLog.dll
+/Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/UnitTest/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Diagnostics.EventLog.Messages.dll
+/Users/dampmaringmail.com/Desktop/GitHub Repos/IndexerSearchEngineProj/UnitTest/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Diagnostics.EventLog.dll
