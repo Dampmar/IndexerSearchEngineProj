@@ -9,6 +9,6 @@ public class XmlDocument : Document
     {
         var xmlDoc = new System.Xml.XmlDocument();
         xmlDoc.Load(FilePath);
-        Content = xmlDoc.InnerText;
+        Content = xmlDoc.OuterXml;
     }
 }
