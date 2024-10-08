@@ -39,21 +39,61 @@ This diagram managed to encompass the overall design we ended up using throughou
 This diagram contains the end design of the program for the development of the code. It explains the various different classes and their relationships in the code without the need of accessing the program.
 
 \section{Graphical User Interface (GUI)}
+The Graphical User Interface (GUI) for our project was developed using Blazor, a modern web framework that allows for the creation of interactive web applications using C sharp. Blazor enables developers to build client-side web applications with a component-based architecture, which promotes reusability and maintainability of code.
+
+The GUI consists of several components that facilitate user interaction with the indexer/search engine. Key features of the GUI include:
+
+\begin{itemize}
+    \item \textbf{Dynamic Routing:} The application uses a router to manage navigation between different pages, such as the home page and the about page. This allows users to seamlessly navigate through the application without full page reloads.
+    \item \textbf{Data Binding:} The GUI leverages data binding to connect the user interface with the underlying data model. This ensures that any changes in the data are automatically reflected in the UI, providing a responsive user experience.
+    \item \textbf{Event Handling:} User actions, such as button clicks and selections from dropdown menus, are handled through event handlers. This allows the application to respond to user input in real-time, such as executing a search query when the user clicks the search button.
+    \item \textbf{Styling and Layout:} The application uses CSS for styling, ensuring a visually appealing and user-friendly interface. The layout is designed to be responsive, adapting to different screen sizes and devices.
+    \item \textbf{Integration with Backend Logic:} The GUI communicates with the backend logic of the indexer/search engine, allowing users to perform searches and view results dynamically. This integration is achieved through dependency injection, where services like the `Indexer` are registered and utilized within the components.
+\end{itemize}
+\subsection{How It Works}
+The GUI operates as follows:
+\begin{enumerate}
+    \item \textbf{User Input:} Users can enter their search queries in a designated textbox. They can also select the vectorization method and distance metric from dropdown menus.
+    \item \textbf{Executing a Search:} After entering a query and selecting the desired options, users click the "Search" button. This triggers the search functionality, which processes the query and retrieves the top \( k \) documents based on the specified criteria.
+    \item \textbf{Displaying Results:} The search results are displayed in a list format. Users can click on any document title to view its full content. If no results are found, an appropriate message is shown.
+\end{enumerate}
+
+The GUI fulfills the following requirements:
+\begin{itemize}
+    \item \textbf{Query Input:} Users can enter their search queries in a textbox, allowing for easy input of search terms.
+    \item \textbf{Search Functionality:} Upon clicking the search button, the application processes the query and retrieves the top \( k \) documents ordered from the most similar to the least similar based on the selected vectorization method and distance metric.
+    \item \textbf{Document Access:} Users can click on the document titles in the search results to read the full content of the documents, enhancing the usability of the application.
+\end{itemize}
+
+\subsection{About Page}
+The About page provides users with an overview of the project, its purpose, and the developers involved. It serves as an informative section that outlines the goals and functionalities of the indexer/search engine. 
+
+Key points included in the About page are:
+\begin{itemize}
+    \item \textbf{Project Overview:} A brief description of the project, highlighting its role in the curriculum for the Object-Oriented Programming course at Texas Tech University.
+    \item \textbf{Functionality:} An explanation of the search engine's capabilities, including recursive folder indexing and the use of algorithms like TF-IDF and Cosine Similarity for document retrieval.
+    \item \textbf{User Interfaces:} Information about the two main interaction interfaces: the Command Line Interface (CLI) and the Graphical User Interface (GUI), emphasizing adherence to Object-Oriented Programming principles.
+    \item \textbf{Importance of Indexing:} A discussion on the significance of indexing and searching through large collections of documents, drawing parallels to larger search engines.
+    \item \textbf{Developers:} A section dedicated to the developers, providing their names and academic status.
+\end{itemize}
+
+This page not only informs users about the project but also enhances the overall user experience by providing context and background information.
+
+Overall, the Blazor-based GUI enhances the usability of the indexer/search engine, making it accessible and efficient for users to search through various document types.
 
 \section{Command Line Interface (CLI)}
 This section will explain how each command may be inputted into the command line of the program. Following are all command variants that are valid in our project.
-\begin{figure}
-    \begin{itemize}
-        \item[$>$] \texttt{index -f $<folderPath>$ -t tfidf -dis cosine}: this command uses the standard method for both the indexer and the search engine, the \textbf{TF-IDF} for indexing and the \textbf{Cosine Similarity} for searching values. 
-        \item[$>$] \texttt{index -f $<folderPath>$ -t tfidf -dis euclidean}: this command uses the \textbf{TF-IDF} algorithm for indexing the files and the \textbf{Euclidean Similarity} algorithm for searching values. 
-        \item[$>$] \texttt{index -f $<folderPath>$ -t vectorizer -dis euclidean}: this command uses the \textbf{Normalized Bag of Words} algorithm for indexing the files and the \textbf{Cosine Similarity} algorithm for searching values. 
-        \item[$>$] \texttt{index -f $<folderPath>$ -t vectorizer -dis cosine}: this command uses the \textbf{Normalized Bag of Words} algorithm for indexing the files and the \textbf{Euclidean Similarity} algorithm for searching values. 
-        \item[$>$] \texttt{load -p $<indexPath>$}: uses the path to the "\texttt{.Json}" document that holds the information of an indexed folder.  
-        \item[$>$] \texttt{search -q $<query>$ -k $<numberResults>$}: gets the query from the user and the number of results it should return form $<numberResults>$. 
-    \end{itemize}
-    \label{fig:Commands}
-\end{figure}
-The item list mentioned before contains all valid formats of command. All values inbetween characters '$<$' and '$>$' represent variables in the command which may change depending on what the user wants. 
+
+\begin{itemize}
+    \item[$>$] \texttt{index -f $<folderPath>$ -t tfidf -dis cosine}: this command uses the standard method for both the indexer and the search engine, the \textbf{TF-IDF} for indexing and the \textbf{Cosine Similarity} for searching values. 
+    \item[$>$] \texttt{index -f $<folderPath>$ -t tfidf -dis euclidean}: this command uses the \textbf{TF-IDF} algorithm for indexing the files and the \textbf{Euclidean Similarity} algorithm for searching values. 
+    \item[$>$] \texttt{index -f $<folderPath>$ -t vectorizer -dis euclidean}: this command uses the \textbf{Normalized Bag of Words} algorithm for indexing the files and the \textbf{Cosine Similarity} algorithm for searching values. 
+    \item[$>$] \texttt{index -f $<folderPath>$ -t vectorizer -dis cosine}: this command uses the \textbf{Normalized Bag of Words} algorithm for indexing the files and the \textbf{Euclidean Similarity} algorithm for searching values. 
+    \item[$>$] \texttt{load -p $<indexPath>$}: uses the path to the "\texttt{.Json}" document that holds the information of an indexed folder.  
+    \item[$>$] \texttt{search -q $<query>$ -k $<numberResults>$}: gets the query from the user and the number of results it should return form $<numberResults>$. 
+\end{itemize}
+
+The item list mentioned before contains all valid formats of command. All values in between characters '$<$' and '$>$' represent variables in the command which may change depending on what the user wants.
 
 \section{Code Overview}
 For this section of the documentation we will be focusing on the back-end of the code. Explaining the overall code structure and how each part correlates to eachother. Let's begin our conversation with the document handling and natural language processing section of the code.
