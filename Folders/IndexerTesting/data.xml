@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <items>
+        <item id="1">
+            <name>Item One</name>
+            <description>This is the first item.</description>
+            <price currency="USD">19.99</price>
+            <tags>
+                <tag>electronics</tag>
+                <tag>gadgets</tag>
+            </tags>
+            <availability>
+                <inStock>true</inStock>
+                <quantity>100</quantity>
+            </availability>
+        </item>
+        <item id="2">
+            <name>Item Two</name>
+            <description>This is the second item.</description>
+            <price currency="EUR">29.99</price>
+            <tags>
+                <tag>furniture</tag>
+                <tag>home</tag>
+            </tags>
+            <availability>
+                <inStock>false</inStock>
+                <quantity>0</quantity>
+            </availability>
+        </item>
+        <item id="3">
+            <name>Item Three</name>
+            <description>This is the third item.</description>
+            <price currency="GBP">39.99</price>
+            <tags>
+                <tag>clothing</tag>
+                <tag>fashion</tag>
+            </tags>
+            <availability>
+                <inStock>true</inStock>
+                <quantity>50</quantity>
+            </availability>
+        </item>
+        <item id="4">
+            <name>Item Four</name>
+            <description>This is the fourth item.</description>
+            <price currency="JPY">2999</price>
+            <tags>
+                <tag>toys</tag>
+                <tag>children</tag>
+            </tags>
+            <availability>
+                <inStock>true</inStock>
+                <quantity>200</quantity>
+            </availability>
+        </item>
+    </items>
+    <metadata>
+        <author>John Doe</author>
+        <created>2023-10-01</created>
+        <updated>2023-10-15</updated>
+        <version>1.0</version>
+    </metadata>
+</root>

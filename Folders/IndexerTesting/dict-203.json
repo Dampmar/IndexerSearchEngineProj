@@ -1,0 +1,94 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Alice",
+            "email": "alice@example.com",
+            "age": 30,
+            "isActive": true
+        },
+        {
+            "id": 2,
+            "name": "Bob",
+            "email": "bob@example.com",
+            "age": 25,
+            "isActive": false
+        },
+        {
+            "id": 3,
+            "name": "Charlie",
+            "email": "charlie@example.com",
+            "age": 35,
+            "isActive": true
+        },
+        {
+            "id": 4,
+            "name": "Diana",
+            "email": "diana@example.com",
+            "age": 28,
+            "isActive": true
+        },
+        {
+            "id": 5,
+            "name": "Ethan",
+            "email": "ethan@example.com",
+            "age": 22,
+            "isActive": false
+        }
+    ],
+    "products": [
+        {
+            "id": 101,
+            "name": "Laptop",
+            "price": 999.99,
+            "inStock": true
+        },
+        {
+            "id": 102,
+            "name": "Smartphone",
+            "price": 499.99,
+            "inStock": true
+        },
+        {
+            "id": 103,
+            "name": "Tablet",
+            "price": 299.99,
+            "inStock": false
+        },
+        {
+            "id": 104,
+            "name": "Headphones",
+            "price": 89.99,
+            "inStock": true
+        },
+        {
+            "id": 105,
+            "name": "Smartwatch",
+            "price": 199.99,
+            "inStock": true
+        }
+    ],
+    "orders": [
+        {
+            "orderId": 1001,
+            "userId": 1,
+            "productIds": [101, 102],
+            "totalAmount": 1499.98,
+            "status": "shipped"
+        },
+        {
+            "orderId": 1002,
+            "userId": 2,
+            "productIds": [103],
+            "totalAmount": 299.99,
+            "status": "pending"
+        },
+        {
+            "orderId": 1003,
+            "userId": 3,
+            "productIds": [104, 105],
+            "totalAmount": 289.98,
+            "status": "delivered"
+        }
+    ]
+}
